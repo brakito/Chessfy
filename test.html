@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="icono.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<title>Nuevo plan</title>
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/test.css">
+	<script src="https://kit.fontawesome.com/0c1d1948dd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<section class="header">
+		<h2>MENU</h2>
+		<div class="menu">
+			<a href="index.html" class="mainLink"><i class="fas fa-calendar-day icono"></i><span class="texto">Mis planes</span></a>
+			<a href="test.html" class="mainLink"><span class="icono"><span class="plusIcon">+</span></span><span class="texto">Nuevo plan</span></a>
+			<!-- <a href="#" class="mainLink"><span class="icono"><i class="fas fa-question"></i></span><span class="texto">Como entrenar</span></a> -->
+		</div>
+	</section>
+
+	<section id="questions">
+		<div class="responsiveMenu">
+			<i class="fas fa-bars icono"></i>
+		</div>
+		<div class="barContent"><div class="bar"></div></div>
+		<div class="question-card active" id="0">
+			 <h2 class="title">¡Atención!</h2>
+			<div title="info" class="info">	
+				<p>
+					Crear un plan de entrenamiento es muy fácil, solo debes responder algunas preguntas sencillas sobre ti y tus partidas.
+				</p>
+				<br>
+				<p>
+					Para que obtengas el mejor plan de entrenamiento, ajustado a tus cualidades, por favor responde con sinceridad.
+				</p>
+				<br>
+				<p>
+					Conviértete en el jugador que quieres ser, ¡Buena suerte!
+				</p>
+			</div>
+		</div>
+
+		<div class="question-card" id="1">
+			<h2 class="title">¿Cuál es tu nombre?</h2>
+			<form class="options" title="text" onsubmit="return false">
+				<input type="text" placeholder="p. ej.. Pedro Perez" value="" name="nombre">
+			</form>
+		</div>
+
+		<div class="question-card" id="2">
+			<h2 class="title">¿Cuál es tu edad?</h2>
+			<form class="options" title="text" onsubmit="return false">
+				<input type="number" placeholder="p. ej.. 16" value="" name="edad">	
+			</form>
+		</div>
+
+		<div class="question-card" id="3">
+			<h2 class="title">¿Cuánto ELO tienes?, puede ser FIDE o de tu cuenta online</h2>
+			<form class="options" title="text" onsubmit="return false">
+				<input type="number" placeholder="p. ej.. 1567" value="" name="elo">	
+			</form>
+		</div>
+
+		<div class="question-card" id="4">
+			<h2 class="title">¿Conoces las variantes e ideas principales de tus aperturas y defensas?</h2>
+			<form class="options" title="radio" onsubmit="return false">
+				<div class="radio">
+					<input type="radio" name="apertura" id="siApertura" value="mcBasico">
+					<label for="siApertura">Si, se me da bien la teoría</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="apertura" id="noApertura" value="mcApertura">
+					<label for="noApertura">No, es difícil para mi</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="apertura" id="noSeApertura" value="mcSuperPractico">
+					<label for="noSeApertura">No entiendo a que se refiere la pregunta</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="question-card" id="5">
+			<h2 class="title">¿Consideras que eres bueno jugando finales?</h2>
+			<form class="options" title="radio" onsubmit="return false">
+				<div class="radio">
+					<input type="radio" name="final" id="siFinal" value="mcPerfeccionamiento">
+					<label for="siFinal">Si, soy realmente bueno</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="final" id="noFinal" value="mcFinal">
+					<label for="noFinal">No, soy pésimo, pero lo intento</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="final" id="algunasFinal" value="mcEstrategia">
+					<label for="algunasFinal">No se me da bien, pero tampoco mal del todo</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="final" id="noJugue" value="mcBasico">
+					<label for="noJugue">Casi siempre terminan mis juegos antes de llegar al final</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="question-card" id="6">
+			<h2 class="title">¿Cuándo tienes ventaja ganas las partidas?</h2>
+			<form class="options" title="radio" onsubmit="return false">
+				<div class="radio">
+					<input type="radio" name="ventaja" id="siVentaja" value="mcBasico">
+					<label for="siVentaja">Si, casi nunca dejo que me arrebaten la victoria</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="ventaja" id="noVentaja" value="mcEstrategia">
+					<label for="noVentaja">No, lo normal es que me confíe de más y pierda la partida</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="ventaja" id="algunosVentaja" value="mcPerfeccionamiento">
+					<label for="algunosVentaja">Diría que un punto medio, algunas veces pierdo y otras veces gano</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="question-card" id="7">
+			<h2 class="title">¿Creas planes durante las partidas?</h2>
+			<form class="options" title="radio" onsubmit="return false">
+				<div class="radio">
+					<input type="radio" name="analisis" id="siAnalisis" value="mcCompetitivo">
+					<label for="siAnalisis">Sí, para mí lo normal es jugar con un plan en mente, tras analizar el juego</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="analisis" id="noAnalisis" value="mcEstrategia">
+					<label for="noAnalisis">No, hago lo que parece mejor a simple vista</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="analisis" id="avecesAnalisis" value="mcPerfeccionamiento">
+					<label for="avecesAnalisis">Casi nunca lo hago, pero en algunas partidas si pienso un pequeño plan</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="question-card" id="8">
+			<h2 class="title">¿Es propio de ti ver jugadas táctica en tus partidas?</h2>
+			<form class="options" title="radio" onsubmit="return false">
+				<div class="radio">
+					<input type="radio" name="tactica" id="miRivalVioTactica" value="mcTactico">
+					<label for="miRivalVioTactica">Es más propio de mis rivales, porque me hacen tácticas que no veo</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="tactica" id="viTardeTactica" value="mcTactico">
+					<label for="viTardeTactica">Si, pero las veo tarde, cuando ya no es posible ejecutarlas</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="tactica" id="siViTactica" value="mcBasico">
+					<label for="siViTactica">Nada se me escapa, me defiendo y aprovecho la situación cuando hay una táctica en el tablero</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="tactica" id="noViTactica" value="mcEstrategia">
+					<label for="noViTactica">No suelen generarse patrones tácticos en mis partidas</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="question-card" id="9">
+			<h2 class="title">¿Piensas a futuro cuando tienes que decidir?, ej. con que pieza recapturar</h2>
+			<form class="options" title="radio" onsubmit="return false">
+				<div class="radio">
+					<input type="radio" name="decisiones" id="siDecidir" value="mcPerfeccionamiento">
+					<label for="siDecidir">Por supuesto que si</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="decisiones" id="noDecidir" value="mcCorreccion">
+					<label for="noDecidir">No, hago lo que parece más evidente o fácil de jugar</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="decisiones" id="algunasDecidir" value="mcBasico">
+					<label for="algunasDecidir">Algunas veces pienso a futuro, pero normalmente hago lo más sencillo de jugar</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="question-card" id="10">
+			<h2 class="title">¿Cómo te la llevas con el tiempo en tus partidas?</h2>
+			<form class="options" title="radio" onsubmit="return false">
+				<div class="radio">
+					<input type="radio" name="tiempo" id="menosTiempo" value="mcTactico">
+					<label for="menosTiempo">No sé que pasa, pero por lo general tengo menos tiempo</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="tiempo" id="masTiempo" value="mcBasico">
+					<label for="masTiempo">Soy veloz, siempre o casi siempre tengo más tiempo</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="tiempo" id="igualTiempo" value="mcPerfeccionamiento">
+					<label for="igualTiempo">El estándar en mis partidas es tener el mismo tiempo que mi rival</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="question-card" id="11">
+			<h2 class="title">Para hacer el entrenamiento más efectivo, ¿Podemos ajustar el tiempo a tu nivel?</h2>
+			<form class="options" title="radio" onsubmit="return false">
+				<div class="radio">
+					<input type="radio" name="tiempoLibre" id="sitiempoLibre" value="true">
+					<label for="sitiempoLibre">No tengo mucho tiempo, aunque puedo sacar una hora al día</label>
+				</div>
+				<div class="radio">
+					<input type="radio" name="tiempoLibre" id="notiempoLibre" value="false">
+					<label for="notiempoLibre">Si, un entrenamiento más efectivo, quiero ajustar el tiempo</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="question-card" id="12">
+			<h2 class="title">¡Tu plan de entrenamiento está en marcha!</h2>
+			<div title="info" class="info">	
+				<p>
+					¡Todo listo!, en cuanto hagas click en continuar serás redirigido a tu plan de entrenamiento personalizado, si puedes compartirnos tu experiencia al terminar el plan de entrenamiento, nos ayudaría a mejorar.
+				</p>
+				<br>
+				<p>
+					Por cierto, aún no tenemos soporte online para guardar tus planes, pero no te preocupes todos los que generes se guardaran en este dispositivo.
+				</p>
+				<br>
+				<p>
+					¡Que la fuerza para entrenar te acompañe!
+				</p>
+			</div>
+		</div>
+
+		<div class="send-content">
+			<button class="send main-button">Continuar ➜</button>
+		</div>
+	</section>
+
+	<script src="js/testControl.js"></script>
+
+	<script>
+		const menuBar = document.querySelector('.responsiveMenu');
+		const menu = document.querySelector('.header');
+		const content = document.querySelector('.menuBarContent');
+		let isActive = false;
+		menuBar.addEventListener("click", () =>{
+			isActive = !isActive;
+			menu.classList.toggle('active');
+			if (isActive == true) {
+				content.classList.remove('fa-bars');
+				content.classList.add('fa-times');
+			} else{
+				content.classList.add('fa-bars');
+				content.classList.remove('fa-times');
+			}
+		});
+	</script>
+</body>
+</html>

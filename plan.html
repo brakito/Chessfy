@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="icono.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <title>Plan de Entrenamiento</title>
+    <link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/plan.css">
+    <script src="https://kit.fontawesome.com/0c1d1948dd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="header">
+		<h2>MENU</h2>
+		<div class="menu">
+			<a href="index.html" class="mainLink"><i class="fas fa-calendar-day icono"></i><span class="texto">Mis planes</span></a>
+			<a href="test.html" class="mainLink"><span class="icono"><span class="plusIcon">+</span></span><span class="texto">Nuevo plan</span></a>
+			<!-- <a href="#" class="mainLink"><span class="icono"><i class="fas fa-question"></i></span><span class="texto">Como entrenar</span></a> -->
+		</div>
+	</section>
+
+    <section class="plan">
+        <div class="responsiveMenu">
+			<i class="fas fa-bars icono menuBarContent"></i>
+		</div>
+        <h2 class="planTitle"></h2>
+        <div class="container"></div>
+    </section>
+
+    <script src="js/generadorDePlanes.js"></script>
+
+    <script>
+		const menuBar = document.querySelector('.responsiveMenu');
+		const menu = document.querySelector('.header');
+		const content = document.querySelector('.menuBarContent');
+		let isActive = false;
+		menuBar.addEventListener("click", () =>{
+			isActive = !isActive;
+			menu.classList.toggle('active');
+			if (isActive == true) {
+				content.classList.remove('fa-bars');
+				content.classList.add('fa-times');
+			} else{
+				content.classList.add('fa-bars');
+				content.classList.remove('fa-times');
+			}
+		});
+	</script>
+</body>
+</html>

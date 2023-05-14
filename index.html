@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="icono.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta name="description" content="Entrenar ajedrez es fácil, pero ¿mejoras tu nivel de juego? Si la respuesta es no entonces, necesitas esta app que te permitirá crear planes de entrenamientos personalizados con algunos clicks. Puedes generar tantos como quieras, tiene tiempos flexibles, un diseño amigable y lo mejor es gratis.
+	¡Construye tu plan ahora!">
+	<meta name="keywords" content="como hacer un plan de entrenamiento de ajedrez, plan de entrenamiento de ajedrez, como mejorar en ajedrez, plan de ajedrez, como hacer un entrenamiento de ajedrez, entrenamiento de ajedrez, entrenar ajedrez">
+	<title>Mis planes</title>
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="https://kit.fontawesome.com/0c1d1948dd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<section class="header">
+		<h2>MENU</h2>
+		<div class="menu">
+			<a href="index.html" class="mainLink"><i class="fas fa-calendar-day icono"></i><span class="texto">Mis planes</span></a>
+			<a href="test.html" class="mainLink"><span class="icono"><span class="plusIcon">+</span></span><span class="texto">Nuevo plan</span></a>
+			<!-- <a href="#" class="mainLink"><span class="icono"><i class="fas fa-question"></i></span><span class="texto">Como entrenar</span></a> -->
+		</div>
+	</section>
+
+	<section id="home">
+		<div class="responsiveMenu">
+			<i class="fas fa-bars icono menuBarContent"></i>
+		</div>
+
+		<h2>MIS PLANES DE ENTRENAMIENTO</h2>
+
+		<div class="planes">
+			<a href="test.html" class="newPlanButton">
+				<div>
+					<span class="plusIcon">+</span>
+					<h3>Nuevo plan</h3>
+				</div>
+			</a>
+		</div>
+	</section>
+
+	<script src="js/savePlan.js"></script>
+	<script>
+		const menuBar = document.querySelector('.responsiveMenu');
+		const menu = document.querySelector('.header');
+		const content = document.querySelector('.menuBarContent');
+		let isActive = false;
+		menuBar.addEventListener("click", () =>{
+			isActive = !isActive;
+			menu.classList.toggle('active');
+			if (isActive == true) {
+				content.classList.remove('fa-bars');
+				content.classList.add('fa-times');
+			} else{
+				content.classList.add('fa-bars');
+				content.classList.remove('fa-times');
+			}
+		});
+	</script>
+
+</body>
+</html>
